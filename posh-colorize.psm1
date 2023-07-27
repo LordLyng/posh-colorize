@@ -9,12 +9,13 @@ function Test-Pygment() {
 }
 
 function Get-LexxerFromFileName([System.IO.FileInfo]$file) {
+    $guessedLexxer = $(pygmentize -N $file.Name)
     $result = switch -Wildcard ( $file.Name )
     {
         "*.jsx" { "js" }
         "*.tsx" { "ts" }
         ".*rc" { "ini" }
-        default { $file.Extension }
+        default { $guessedLexxer }
     }
 
     return $result
