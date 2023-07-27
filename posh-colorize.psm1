@@ -9,7 +9,7 @@ function Test-Pygment() {
 }
 
 function Get-LexxerFromFileName([System.IO.FileInfo]$file) {
-    $result = switch ( $file.Name )
+    $result = switch -Wildcard ( $file.Name )
     {
         "*.jsx" { "js" }
         "*.tsx" { "ts" }
