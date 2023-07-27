@@ -15,6 +15,8 @@ function Get-LexxerFromFileName([System.IO.FileInfo]$file) {
         "*.jsx" { "js" }
         "*.tsx" { "ts" }
         ".*rc" { "ini" }
+        "*.csproj" { "xml" }
+        "*.sln" { "xml" }
         default { $guessedLexxer }
     }
 
