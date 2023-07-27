@@ -15,7 +15,7 @@ I do not plan on maintaining this so it won't be published to the powershell gal
 I do hoever reocmmend the existing module called `Install-ModuleFromGitHub` an article can be found on how it works [here](https://dfinke.github.io/powershell/2016/11/21/Quickly-Install-PowerShell-Modules-from-GitHub.html).
 
 After installing it, it hsould be as simple as running:
-`Install-ModuleFromGitHub -GitHubRepo LordLyng/posh-colorize`
+`Install-ModuleFromGitHub -GitHubRepo LordLyng/posh-colorize -Bracnh main -Scope CurrentUser`
 
 ## Usage
 it essentially registers 3 methods and 3 aliases. I mostly use the aliases, they will be lsited here with a short explannation.
