@@ -14,7 +14,7 @@ function Get-LexxerFromFileName([System.IO.FileInfo]$file) {
         "*.jsx" { "js" }
         "*.tsx" { "ts" }
         ".*rc" { "ini" }
-        default { $extension }
+        default { $file.Extension }
     }
 
     return $result
