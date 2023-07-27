@@ -9,11 +9,10 @@ function Test-Pygment() {
 }
 
 function Get-LexxerFromFileName([System.IO.FileInfo]$file) {
-    $extension = $file.Extension.Substring(1);
-    $result = switch ( $extension )
+    $result = switch ( $file.Name )
     {
-        jsx { "js" }
-        tsx { "ts" }
+        "*.jsx" { "js" }
+        "*.tsx" { "ts" }
         ".*rc" { "ini" }
         default { $extension }
     }
